@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Chapter Circle</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/careers.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="media/logos/logo.png" alt="Chapter Circle" class="logo">
+                <span class="logo-text">Chapter Circle</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#browse" class="nav-link">Browse</a>
+                <a href="index.html#categories" class="nav-link">Categories</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="careers.html" class="nav-link active">Careers</a>
+            </div>
+            <div class="nav-actions">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="profile-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="careers-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Join Our Team</h1>
+                <p class="hero-subtitle">Be part of a revolution in learning. Help us transform how people consume knowledge through engaging video content.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Open Positions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Remote Friendly</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">Flexible</div>
+                        <div class="stat-label">Work Hours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="floating-elements">
+                <div class="floating-code" data-speed="2">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="floating-video" data-speed="1.5">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="floating-pen" data-speed="3">
+                    <i class="fas fa-pen-fancy"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Internship Opportunities</h2>
+            <p class="section-subtitle">Choose your path and start your journey with us</p>
+            
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="tech">
+                    <i class="fas fa-laptop-code"></i>
+                    Technical Internships
+                </button>
+                <button class="tab-btn" data-category="non-tech">
+                    <i class="fas fa-palette"></i>
+                    Non-Technical Internships
+                </button>
+            </div>
+
+            <!-- Technical Internships -->
+            <div class="jobs-container active" id="tech-jobs">
+                <div class="job-grid">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-icon">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <div class="job-badge">Remote</div>
+                        </div>
+                        <h3 class="job-title">Android Developer Intern</h3>
+                        <p class="job-description">Build and maintain our mobile application for Android devices. Work with modern Android development tools and frameworks.</p>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3-6 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Part-time</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Students welcome</span>
+                            </div>
+                        </div>
+                        <div class="job-skills">
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Android Studio</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                        <button class="btn btn-primary apply-btn">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="job-badge">Remote</div>
+                        </div>
+                        <h3 class="job-title">Frontend Developer Intern</h3>
+                        <p class="job-description">Create beautiful and responsive user interfaces for our web platform. Work with modern frontend technologies.</p>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3-6 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Part-time</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Students welcome</span>
+                            </div>
+                        </div>
+                        <div class="job-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">HTML5</span>
+                        </div>
+                        <button class="btn btn-primary apply-btn">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="job-badge">Remote</div>
+                        </div>
+                        <h3 class="job-title">Python Backend Developer Intern</h3>
+                        <p class="job-description">Develop robust backend systems and APIs. Work with databases and cloud services to power our platform.</p>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3-6 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Part-time</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Students welcome</span>
+                            </div>
+                        </div>
+                        <div class="job-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">AWS</span>
+                        </div>
+                        <button class="btn btn-primary apply-btn">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Non-Technical Internships -->
+            <div class="jobs-container" id="non-tech-jobs">
+                <div class="job-grid">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-icon">
+                                <i class="fas fa-pen"></i>
+                            </div>
+                            <div class="job-badge">Remote</div>
+                        </div>
+                        <h3 class="job-title">Content Writer Intern</h3>
+                        <p class="job-description">Create engaging content for our video summaries. Research books and write compelling scripts for our narrators.</p>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3-6 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Part-time</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Students welcome</span>
+                            </div>
+                        </div>
+                        <div class="job-skills">
+                            <span class="skill-tag">Creative Writing</span>
+                            <span class="skill-tag">Research</span>
+                            <span class="skill-tag">Storytelling</span>
+                            <span class="skill-tag">Editing</span>
+                        </div>
+                        <button class="btn btn-primary apply-btn">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <div class="job-badge">Remote</div>
+                        </div>
+                        <h3 class="job-title">Video Editor Intern</h3>
+                        <p class="job-description">Edit and enhance our video content. Work with footage, graphics, and audio to create engaging video summaries.</p>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3-6 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Part-time</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Students welcome</span>
+                            </div>
+                        </div>
+                        <div class="job-skills">
+                            <span class="skill-tag">Adobe Premiere</span>
+                            <span class="skill-tag">After Effects</span>
+                            <span class="skill-tag">Motion Graphics</span>
+                            <span class="skill-tag">Color Grading</span>
+                        </div>
+                        <button class="btn btn-primary apply-btn">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="job-badge">Remote</div>
+                        </div>
+                        <h3 class="job-title">Market Research Intern</h3>
+                        <p class="job-description">Conduct market research and analyze industry trends. Help us understand our audience and competition.</p>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3-6 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Part-time</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Students welcome</span>
+                            </div>
+                        </div>
+                        <div class="job-skills">
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">Surveys</span>
+                            <span class="skill-tag">Reports</span>
+                        </div>
+                        <button class="btn btn-primary apply-btn">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="job-badge">Remote</div>
+                        </div>
+                        <h3 class="job-title">Creative Strategist Intern</h3>
+                        <p class="job-description">Develop creative strategies for our content and marketing campaigns. Help us stand out in the digital space.</p>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3-6 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Part-time</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Students welcome</span>
+                            </div>
+                        </div>
+                        <div class="job-skills">
+                            <span class="skill-tag">Strategy</span>
+                            <span class="skill-tag">Creativity</span>
+                            <span class="skill-tag">Branding</span>
+                            <span class="skill-tag">Innovation</span>
+                        </div>
+                        <button class="btn btn-primary apply-btn">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div class="job-badge">Remote</div>
+                        </div>
+                        <h3 class="job-title">Social Media Marketing Intern</h3>
+                        <p class="job-description">Manage our social media presence and create engaging content. Help us grow our community across platforms.</p>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3-6 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Part-time</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Students welcome</span>
+                            </div>
+                        </div>
+                        <div class="job-skills">
+                            <span class="skill-tag">Social Media</span>
+                            <span class="skill-tag">Content Creation</span>
+                            <span class="skill-tag">Analytics</span>
+                            <span class="skill-tag">Community</span>
+                        </div>
+                        <button class="btn btn-primary apply-btn">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Intern With Us?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <h3>Remote Work</h3>
+                    <p>Work from anywhere in the world. We provide all the tools you need to succeed remotely.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Hours</h3>
+                    <p>Choose your own working hours that fit your schedule and lifestyle.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Mentorship</h3>
+                    <p>Learn from experienced professionals and get guidance throughout your internship.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificate</h3>
+                    <p>Receive a professional certificate upon completion of your internship.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Networking</h3>
+                    <p>Connect with professionals in the edtech and content creation industry.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Growth Opportunities</h3>
+                    <p>Potential for full-time positions and career advancement within the company.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Application Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Apply Online</h3>
+                    <p>Fill out our application form with your details and portfolio.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Initial Screening</h3>
+                    <p>We'll review your application and get back to you within 48 hours.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Interview</h3>
+                    <p>Have a casual conversation with our team about your goals and interests.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Welcome Aboard!</h3>
+                    <p>Start your internship journey with Chapter Circle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="media/logos/logo.png" alt="Chapter Circle" class="logo">
+                        <span class="logo-text">Chapter Circle</span>
+                    </div>
+                    <p>Transform your reading experience with video summaries in story format.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#browse">Browse</a></li>
+                        <li><a href="index.html#categories">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chapter Circle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/careers.js"></script>
+</body>
+</html> 
