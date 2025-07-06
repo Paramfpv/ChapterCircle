@@ -1,5 +1,37 @@
 // Careers Page JavaScript
 
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Toggle mobile menu
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+    });
+    
+    // Close mobile menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+
 // Simple and reliable tab functionality
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Careers page loaded, initializing tabs...');
@@ -56,86 +88,99 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Application modal function
 function showApplicationModal(jobTitle) {
+    // Create modal container
     const modal = document.createElement('div');
-    modal.className = 'application-modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Apply for ${jobTitle}</h3>
-                <button class="close-modal">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Thank you for your interest! Please send us your resume and a brief introduction at:</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>circlechapter@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 74330 17158</span>
-                    </div>
-                </div>
-                <p class="application-note">Include the position title in your email subject line.</p>
-                <div class="modal-actions">
-                    <button class="btn btn-secondary close-modal-btn">Close</button>
-                    <a href="mailto:circlechapter@gmail.com?subject=Application for ${jobTitle}" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Send Email
-                    </a>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    // Add styles
     modal.style.cssText = `
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.8);
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 10000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+        z-index: 9999;
+        padding: 20px;
+        box-sizing: border-box;
     `;
-    
-    const modalContent = modal.querySelector('.modal-content');
+
+    // Create modal content
+    const modalContent = document.createElement('div');
     modalContent.style.cssText = `
         background: #1a1a1a;
         border-radius: 16px;
         padding: 2rem;
         max-width: 500px;
-        width: 90%;
-        border: 1px solid rgba(255,255,255,0.1);
-        transform: scale(0.9);
-        transition: transform 0.3s ease;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        position: relative;
     `;
-    
+
+    // Create modal HTML
+    modalContent.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <h3 style="margin: 0; color: #ffffff; font-size: 1.5rem; font-weight: 600;">Apply for ${jobTitle}</h3>
+            <button id="closeBtn" style="background: none; border: none; color: #cccccc; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; border-radius: 50%; transition: all 0.3s ease;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div style="color: #cccccc; line-height: 1.6;">
+            <p>Thank you for your interest! Please send us your resume and a brief introduction at:</p>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; color: #ffffff;">
+                    <i class="fas fa-envelope" style="color: #e50914; font-size: 1.2rem; width: 20px;"></i>
+                    <span>circlechapter@gmail.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0; color: #ffffff;">
+                    <i class="fas fa-phone" style="color: #e50914; font-size: 1.2rem; width: 20px;"></i>
+                    <span>+91 74330 17158</span>
+                </div>
+            </div>
+            <p style="background: rgba(229, 9, 20, 0.1); border: 1px solid rgba(229, 9, 20, 0.3); border-radius: 8px; padding: 1rem; margin: 1.5rem 0; color: #ffffff;">
+                Include the position title in your email subject line.
+            </p>
+            <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                <button id="closeBtn2" style="flex: 1; min-width: 120px; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 1rem; border: none; border-radius: 8px; background: rgba(255,255,255,0.1); color: #ffffff; cursor: pointer; transition: all 0.3s ease;">
+                    Close
+                </button>
+                <a href="mailto:circlechapter@gmail.com?subject=Application for ${jobTitle}" style="flex: 1; min-width: 120px; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 1rem; border: none; border-radius: 8px; background: #e50914; color: #ffffff; text-decoration: none; transition: all 0.3s ease;">
+                    <i class="fas fa-envelope"></i> Send Email
+                </a>
+            </div>
+        </div>
+    `;
+
+    // Add modal to page
+    modal.appendChild(modalContent);
     document.body.appendChild(modal);
-    
-    // Animate in
-    setTimeout(() => {
-        modal.style.opacity = '1';
-        modalContent.style.transform = 'scale(1)';
-    }, 10);
-    
-    // Close modal functionality
+
+    // Mobile responsive adjustments
+    if (window.innerWidth <= 768) {
+        modal.style.padding = '10px';
+        modalContent.style.maxHeight = '95vh';
+        modalContent.style.padding = '1.5rem';
+        
+        const actionDiv = modalContent.querySelector('div:last-child');
+        actionDiv.style.flexDirection = 'column';
+        
+        const buttons = actionDiv.querySelectorAll('button, a');
+        buttons.forEach(btn => {
+            btn.style.width = '100%';
+        });
+    }
+
+    // Close function
     const closeModal = () => {
-        modal.style.opacity = '0';
-        modalContent.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-            document.body.removeChild(modal);
-        }, 300);
+        document.body.removeChild(modal);
     };
-    
-    modal.querySelector('.close-modal').addEventListener('click', closeModal);
-    modal.querySelector('.close-modal-btn').addEventListener('click', closeModal);
+
+    // Add event listeners
+    modal.querySelector('#closeBtn').addEventListener('click', closeModal);
+    modal.querySelector('#closeBtn2').addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => {
         if (e.target === modal) closeModal();
     });
