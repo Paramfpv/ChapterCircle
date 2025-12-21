@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Plan</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #cccccc;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .plan-box {
+            background: #fff;
+            color: #000;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .plan-heading {
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .price {
+            margin-top: 8px;
+            font-size: 26px;
+            font-weight: 700;
+            color: #559dff;
+        }
+
+        .plan-details {
+            margin-top: 15px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .plan-details li {
+            margin-bottom: 10px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .check {
+            color: #559dff;
+            font-weight: 900;
+        }
+
+        .cancel-info {
+            margin-top: 25px;
+            padding: 18px;
+            border-radius: 12px;
+            background: #1c1c1c;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .footer-buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .btn-outline,
+        .btn-filled {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .btn-outline {
+            border: 2px solid #559dff;
+            color: #559dff;
+        }
+
+        .btn-filled {
+            background: #559dff;
+            color: #fff;
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 22px;
+            }
+            .price {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Subscription Plan</div>
+
+        <div class="title">Learn from the World’s Best Books Visually in Minutes.</div>
+        <div class="subtitle">Short, powerful book-based video lessons designed to teach you faster, deeper, and smarter.</div>
+
+        <!-- Monthly Plan -->
+        <div class="plan-box">
+            <div class="plan-heading">📅 Monthly Plan</div>
+            <div class="price">₹199 / month</div>
+            <ul class="plan-details">
+                <li><span class="check">✔</span> Unlimited access to video lessons from the world’s best books</li>
+                <li><span class="check">✔</span> Video + Audio — learn all lessons in 3 minutes</li>
+                <li><span class="check">✔</span> AI Mind Maps, Personalized dashboard, and many more value features</li>
+                <li><span class="check">✔</span> Cancel anytime, no hidden fees</li>
+            </ul>
+        </div>
+
+        <!-- Annual Plan -->
+        <div class="plan-box" style="background:#559dff;color:#fff;">
+            <div class="plan-heading">⭐ Annual Plan <span style="background:#fff;color:#000;padding:3px 8px;border-radius:6px;font-size:12px;font-weight:600;">Save 37%</span></div>
+            <div class="price" style="color:#fff;">₹1,499 / year</div>
+            <ul class="plan-details">
+                <li><span class="check" style="color:#fff;">✔</span> Full access for 12 months — at the cost of just 7 months!</li>
+                <li><span class="check" style="color:#fff;">✔</span> All features of the monthly plan</li>
+                <li><span class="check" style="color:#fff;">✔</span> Best value for those who want to grow and learn consistently</li>
+            </ul>
+        </div>
+
+        <div class="cancel-info">
+            You can cancel anytime from your account settings — hassle-free. Grow & Elevate yourself, NOW.
+        </div>
+
+        <!-- <div class="footer-buttons">
+            <a href="#" class="btn-outline">Explore Free Lessons</a>
+            <a href="#" class="btn-filled">Create Account</a>
+        </div> -->
+    </div>
+</body>
+</html>
