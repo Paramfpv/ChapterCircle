@@ -118,7 +118,7 @@ body {
 
 .search-btn:hover,
 .profile-btn:hover {
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 /* Hamburger Menu */
@@ -228,13 +228,13 @@ body {
 }
 
 .btn-secondary {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     color: #1a1a1a;
     border: 1px solid #87CEEB;
 }
 
 .btn-secondary:hover {
-    background: rgba(255,255,255,1);
+    background: rgba(255, 255, 255, 1);
     transform: translateY(-2px);
     border-color: #1e90ff;
 }
@@ -248,49 +248,69 @@ body {
     position: relative;
 }
 
-.video-placeholder {
-    width: 400px;
-    height: 250px;
-    background: linear-gradient(45deg, #ffffff, #f0f8ff);
-    border-radius: 16px;
+.hero-video-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    max-width: 400px;
     cursor: pointer;
     transition: transform 0.3s ease;
-    border: 2px solid rgba(30, 144, 255, 0.3);
+}
+
+.hero-video-card:hover {
+    transform: translateY(-5px);
+}
+
+.hero-video-thumbnail {
+    width: 400px;
+    height: 250px;
+    background: url('../media/books/monk who sold his ferrari home.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.video-placeholder:hover {
-    transform: scale(1.05);
-    border-color: #1e90ff;
-}
-
-.video-placeholder i {
-    font-size: 3rem;
-    color: #1e90ff;
-    margin-bottom: 1rem;
-}
-
-.video-placeholder p {
-    color: #333333;
-    font-weight: 500;
-}
-
-.sample-logo {
-    margin-bottom: 1rem;
+.hero-video-thumbnail .play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(30, 144, 255, 0.9);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.sample-logo-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+.hero-video-card:hover .play-overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.hero-video-thumbnail .play-overlay i {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-left: 4px;
+    /* Optical adjustment for play icon */
+}
+
+.hero-video-info {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.hero-video-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.4;
 }
 
 /* Featured Section */
@@ -383,7 +403,7 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     padding: 4px 8px;
     border-radius: 4px;
@@ -490,7 +510,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 2000;
     backdrop-filter: blur(10px);
 }
@@ -590,7 +610,7 @@ body {
 .footer {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     padding: 3rem 0 1rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #ffffff;
 }
 
@@ -634,7 +654,7 @@ body {
 .social-links a {
     width: 40px;
     height: 40px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -651,7 +671,7 @@ body {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #cccccc;
 }
 
@@ -662,11 +682,11 @@ body {
         text-align: center;
         padding: 2rem 0;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 0;
@@ -685,11 +705,11 @@ body {
         padding: 2rem;
         box-sizing: border-box;
     }
-    
+
     .nav-menu.active {
         right: 0;
     }
-    
+
     .nav-menu .nav-link {
         font-size: 1.2rem;
         padding: 1rem 0;
@@ -698,24 +718,24 @@ body {
         border-bottom: 1px solid rgba(26, 26, 26, 0.1);
         color: #1a1a1a;
     }
-    
+
     .nav-menu .nav-link:last-child {
         border-bottom: none;
     }
-    
+
     .nav-menu .nav-link:hover,
     .nav-menu .nav-link.active {
         color: #1e90ff;
     }
-    
+
     .hamburger {
         display: flex;
     }
-    
+
     .nav-actions {
         display: none;
     }
-    
+
     /* About page specific mobile styles */
     .about-page .nav-menu {
         position: fixed;
@@ -735,48 +755,48 @@ body {
         padding: 2rem;
         box-sizing: border-box;
     }
-    
+
     .about-page .nav-menu.active {
         right: 0;
     }
-    
+
     .about-page .nav-menu .nav-link {
         font-size: 1.2rem;
         padding: 1rem 0;
         width: 100%;
         text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         color: #1a1a1a;
         text-decoration: none;
         transition: color 0.3s ease;
     }
-    
+
     .about-page .nav-menu .nav-link:last-child {
         border-bottom: none;
     }
-    
+
     .about-page .nav-menu .nav-link:hover,
     .about-page .nav-menu .nav-link.active {
         color: #1e90ff;
     }
-    
+
     .book-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 1.5rem;
     }
-    
+
     .book-card {
         max-width: 220px;
     }
-    
+
     .book-thumbnail {
         height: 280px;
     }
-    
+
     .category-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-    
+
     .modal-content {
         width: 95%;
         margin: 20px;
@@ -787,43 +807,43 @@ body {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn {
         width: 100%;
         max-width: 300px;
         justify-content: center;
     }
-    
+
     .book-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-    
+
     .book-card {
         max-width: 160px;
     }
-    
+
     .book-thumbnail {
         height: 240px;
     }
-    
+
     .book-info {
         padding: 1rem;
     }
-    
+
     .book-title {
         font-size: 1rem;
     }
-    
+
     .book-author {
         font-size: 0.8rem;
     }
-    
+
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -907,37 +927,37 @@ html {
     .about-hero .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .about-hero .hero-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .about-section .section-title {
         font-size: 2rem;
     }
-    
+
     .lead-text {
         font-size: 1.3rem;
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .building-item {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
     }
-    
+
     .roles-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .quote-text {
         font-size: 1.2rem;
     }
-    
+
     .back-to-top {
         bottom: 20px;
         right: 20px;
@@ -945,4 +965,4 @@ html {
         height: 45px;
         font-size: 1rem;
     }
-} 
+}

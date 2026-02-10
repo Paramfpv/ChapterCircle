@@ -13,7 +13,7 @@
 //     const hamburger = document.querySelector('.hamburger');
 //     const navMenu = document.querySelector('.nav-menu');
 //     const navLinks = document.querySelectorAll('.nav-link, .nav-menu a');
-    
+
 //     if (hamburger && navMenu) {
 //         // Toggle mobile menu
 //         hamburger.addEventListener('click', function() {
@@ -21,7 +21,7 @@
 //             navMenu.classList.toggle('active');
 //             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
 //         });
-        
+
 //         // Close mobile menu when clicking on a link
 //         navLinks.forEach(link => {
 //             link.addEventListener('click', function() {
@@ -30,7 +30,7 @@
 //                 document.body.style.overflow = 'auto';
 //             });
 //         });
-        
+
 //         // Close mobile menu when clicking outside
 //         document.addEventListener('click', function(e) {
 //             if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
@@ -116,7 +116,7 @@
 //     card.addEventListener('click', () => {
 //         const bookId = card.getAttribute('data-book');
 //         const book = bookData[bookId];
-        
+
 //         if (book) {
 //             openVideoModal(book);
 //         }
@@ -129,10 +129,10 @@
 //     videoTitle.textContent = book.title;
 //     videoAuthor.textContent = book.author;
 //     videoDescription.textContent = book.description;
-    
+
 //     videoModal.style.display = 'block';
 //     document.body.style.overflow = 'hidden';
-    
+
 //     // Add animation class
 //     setTimeout(() => {
 //         videoModal.querySelector('.modal-content').style.transform = 'translate(-50%, -50%) scale(1)';
@@ -144,7 +144,7 @@
 // function closeVideoModal() {
 //     videoModal.style.display = 'none';
 //     document.body.style.overflow = 'auto';
-    
+
 //     // Reset animation
 //     videoModal.querySelector('.modal-content').style.transform = 'translate(-50%, -50%) scale(0.9)';
 //     videoModal.querySelector('.modal-content').style.opacity = '0';
@@ -232,14 +232,14 @@
 //         opacity: 0;
 //         transform: translateY(30px);
 //     }
-    
+
 //     @keyframes fadeInUp {
 //         to {
 //             opacity: 1;
 //             transform: translateY(0);
 //         }
 //     }
-    
+
 //     .modal-content {
 //         transform: translate(-50%, -50%) scale(0.9);
 //         opacity: 0;
@@ -293,7 +293,7 @@
 //         const originalText = this.textContent;
 //         this.textContent = 'Loading...';
 //         this.disabled = true;
-        
+
 //         // Simulate loading (remove in real app)
 //         setTimeout(() => {
 //             this.textContent = originalText;
@@ -308,7 +308,7 @@
 // document.addEventListener('keydown', (e) => {
 //     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
 //         e.preventDefault();
-        
+
 //         if (currentFocusIndex === -1) {
 //             currentFocusIndex = 0;
 //         } else {
@@ -318,10 +318,10 @@
 //                 currentFocusIndex = currentFocusIndex === 0 ? bookCards.length - 1 : currentFocusIndex - 1;
 //             }
 //         }
-        
+
 //         bookCards[currentFocusIndex].focus();
 //     }
-    
+
 //     if (e.key === 'Enter' && document.activeElement.classList.contains('book-card')) {
 //         document.activeElement.click();
 //     }
@@ -368,7 +368,7 @@
 // // Initialize the app
 // document.addEventListener('DOMContentLoaded', () => {
 //     console.log('Chapter Circle loaded successfully!');
-    
+
 //     // Add any initialization code here
 //     trackEvent('page_view', { page: 'home' });
 // }); 
@@ -383,30 +383,30 @@ const videoAuthor = document.querySelector('.video-author');
 const videoDescription = document.querySelector('.video-description');
 
 // Mobile menu functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link, .nav-menu a');
-    
+
     if (hamburger && navMenu) {
         // Toggle mobile menu
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function () {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
         });
-        
+
         // Close mobile menu when clicking on a link
         navLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.style.overflow = 'auto';
             });
         });
-        
+
         // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
@@ -515,10 +515,10 @@ function openVideoModal(book) {
     videoTitle.textContent = book.title;
     videoAuthor.textContent = book.author;
     videoDescription.textContent = book.description;
-    
+
     videoModal.style.display = 'block';
     document.body.style.overflow = 'hidden';
-    
+
     // Add animation class
     setTimeout(() => {
         videoModal.querySelector('.modal-content').style.transform = 'translate(-50%, -50%) scale(1)';
@@ -530,7 +530,7 @@ function openVideoModal(book) {
 function closeVideoModal() {
     videoModal.style.display = 'none';
     document.body.style.overflow = 'auto';
-    
+
     // Reset animation
     videoModal.querySelector('.modal-content').style.transform = 'translate(-50%, -50%) scale(0.9)';
     videoModal.querySelector('.modal-content').style.opacity = '0';
@@ -570,10 +570,10 @@ profileBtn.addEventListener('click', () => {
 //     alert('Sample video player coming soon!');
 // });
 // Hero video placeholder click - open sample YouTube summary in new tab
-const heroVideo = document.querySelector('.hero-video .video-placeholder');
+const heroVideo = document.querySelector('.hero-video-card');
 if (heroVideo) {
     heroVideo.addEventListener('click', () => {
-        const sampleYouTubeURL = "https://youtu.be/0l-LnM9yFEc?si=hPYECp08A4wZ8Cdt"; // Replace with actual URL
+        const sampleYouTubeURL = "https://youtu.be/67vzA1mCt1c?si=lk3YCPW6B_BDb5fa"; // Replace with actual URL
         window.open(sampleYouTubeURL, '_blank');
     });
 }
@@ -678,11 +678,11 @@ window.addEventListener('scroll', debouncedScrollHandler);
 // Add loading states for buttons
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         const originalText = this.textContent;
         this.textContent = 'Loading...';
         this.disabled = true;
-        
+
         // Simulate loading (remove in real app)
         setTimeout(() => {
             this.textContent = originalText;
@@ -697,7 +697,7 @@ let currentFocusIndex = -1;
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
         e.preventDefault();
-        
+
         if (currentFocusIndex === -1) {
             currentFocusIndex = 0;
         } else {
@@ -707,10 +707,10 @@ document.addEventListener('keydown', (e) => {
                 currentFocusIndex = currentFocusIndex === 0 ? bookCards.length - 1 : currentFocusIndex - 1;
             }
         }
-        
+
         bookCards[currentFocusIndex].focus();
     }
-    
+
     if (e.key === 'Enter' && document.activeElement.classList.contains('book-card')) {
         document.activeElement.click();
     }
